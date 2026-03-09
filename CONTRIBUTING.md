@@ -1,12 +1,12 @@
 # Contributing to the Agentic Loss-of-Control Threat Matrix
 
-Thank you for your interest in contributing. This matrix is maintained as a community resource so it can evolve alongside the capabilities it tracks. Contributions of all kinds are welcome — new techniques, updated evidence, improved mitigations, and corrections.
+Thank you for your interest in contributing. This matrix is maintained as a community resource so it can evolve alongside the capabilities it tracks. Contributions of all kinds are welcome: new techniques, updated evidence, improved mitigations, and corrections.
 
 ## How the Repo Works
 
-The **source of truth** is the set of YAML files in `matrix/`. Each file represents one tactic (kill chain stage) and contains all of its techniques. A script reads these files and auto-generates the `README.md` on every merge to `main`.
+The source of truth is the set of YAML files in `matrix/`. Each file represents one tactic (kill chain stage) and contains all of its techniques. A script reads these files and auto-generates the `README.md` on every merge to `main`.
 
-**You only need to edit the YAML files.** Never edit `README.md` by hand.
+You only need to edit the YAML files. Never edit `README.md` by hand.
 
 ## Quick Start
 
@@ -89,7 +89,7 @@ techniques:
 ### Updating an Existing Technique
 
 1. Find the technique in the relevant YAML file.
-2. Edit the fields that need updating — capability status, evidence list, mitigations, or level.
+2. Edit the fields that need updating: capability status, evidence list, mitigations, or level.
 3. If you are changing the level (e.g., from `theoretical` to `partial`), include the evidence that supports the change.
 
 ### Proposing a New Tactic
@@ -98,10 +98,10 @@ If you believe a new kill chain stage is needed, open an [issue](https://github.
 
 ## Pull Request Guidelines
 
-- **One logical change per PR** (e.g., one new technique, or one evidence update). This makes review faster.
+- One logical change per PR (e.g., one new technique, or one evidence update). This makes review faster.
 - Write a clear PR description explaining *why* the change is warranted.
 - Ensure all evidence entries include working URLs.
-- Do not edit `README.md` — it is auto-generated.
+- Do not edit `README.md`; it is auto-generated.
 
 ## Code of Conduct
 
