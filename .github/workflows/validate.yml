@@ -1,0 +1,30 @@
+name: Validate Matrix
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate matrix schema
+        run: python scripts/validate_matrix.py
+
+      - name: Generate README
+        run: python scripts/generate_readme.py
+
+      - name: Ensure README is up to date
+        run: git diff --exit-code README.md

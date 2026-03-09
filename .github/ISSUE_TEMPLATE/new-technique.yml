@@ -1,0 +1,78 @@
+name: New Technique
+description: Propose a new technique for the threat matrix.
+title: "[New Technique]: "
+labels:
+  - enhancement
+body:
+  - type: dropdown
+    id: tactic
+    attributes:
+      label: Tactic
+      description: Which tactic should this technique belong to?
+      options:
+        - Discovery
+        - Defence Evasion
+        - Resource Acquisition
+        - Exfiltration
+        - Replication
+        - Persistence
+    validations:
+      required: true
+
+  - type: input
+    id: technique_name
+    attributes:
+      label: Technique name
+      description: Short, descriptive name for the proposed technique.
+      placeholder: Example - Dormant Beaconing
+    validations:
+      required: true
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: Proposed capability level
+      options:
+        - full
+        - partial
+        - theoretical
+        - proposed
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Technique description
+      description: Explain what the technique is and how it works.
+    validations:
+      required: true
+
+  - type: textarea
+    id: capability_status
+    attributes:
+      label: Capability status
+      description: Describe what current models can and cannot do here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and sources
+      description: Include links to papers, evals, incidents, or reports.
+      placeholder: |
+        - Title:
+          Authors:
+          Year:
+          URL:
+    validations:
+      required: false
+
+  - type: textarea
+    id: mitigations
+    attributes:
+      label: Mitigations
+      description: List mitigations or defensive controls relevant to this technique.
+    validations:
+      required: true
