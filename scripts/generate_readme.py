@@ -52,7 +52,7 @@ def generate():
     )
     lines.append("")
     lines.append(
-        "> Threat matrices such as this one should be living documents if we are "
+        "Threat matrices such as this one should be living documents if we are "
         "to even come close to keeping up with how fast frontier models improve. "
         "The ability to suggest new entries, and to update existing ones, is "
         "essential. See [CONTRIBUTING.md](CONTRIBUTING.md) to get involved."
