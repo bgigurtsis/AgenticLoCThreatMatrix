@@ -9,7 +9,7 @@
 ## Matrix changes
 
 - Tactic:
-- Technique ID:
+- Technique:
 - Capability level:
 
 ## Evidence

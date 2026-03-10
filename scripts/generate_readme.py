@@ -81,16 +81,16 @@ def generate():
     # Summary table
     lines.append("## Summary")
     lines.append("")
-    lines.append("| Tactic | ID | Technique | Level |")
-    lines.append("|--------|----|-----------|-------|")
+    lines.append("| Tactic | Technique | Level |")
+    lines.append("|--------|-----------|-------|")
     for tactic in tactics:
         first = True
         for tech in tactic["techniques"]:
             tactic_cell = f"**{tactic['name']}**" if first else ""
             badge = LEVEL_LABELS.get(tech["level"], tech["level"].title())
-            tech_link = f'[{tech["name"]}](#{tech["id"].lower().replace(".", "")}-{tech["name"].lower().replace(" ", "-")})'
+            tech_link = f'[{tech["name"]}](#{tech["name"].lower().replace(" ", "-")})'
             lines.append(
-                f"| {tactic_cell} | {tech['id']} | {tech_link} | {badge} |"
+                f"| {tactic_cell} | {tech_link} | {badge} |"
             )
             first = False
     lines.append("")
@@ -108,8 +108,7 @@ def generate():
         lines.append("")
 
         for tech in tactic["techniques"]:
-            anchor = f"{tech['id']} {tech['name']}"
-            lines.append(f"#### {anchor}")
+            lines.append(f"#### {tech['name']}")
             lines.append("")
             badge = LEVEL_LABELS.get(tech["level"], tech["level"].title())
             lines.append(f"**Level:** {badge}")
